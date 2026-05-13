@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anonymous_Pro, Bakbak_One, Gasoek_One } from "next/font/google";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
 const anonymousPro = Anonymous_Pro({
@@ -36,7 +37,7 @@ export default function RootLayout({
       <body
         className={`${anonymousPro.variable} ${bakbakOne.variable} ${gasoekOne.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

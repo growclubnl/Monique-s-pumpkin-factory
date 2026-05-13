@@ -5,6 +5,12 @@ export const FIGMA_ASSETS = {
   photoBottom: "/figma/photo-bottom.jpg",
   heroBlob: "/figma/hero-blob.svg",
   flagNl: "/figma/flag-nl.svg",
+  /** Top 5 talen onder internationale toeristen in Nederland (VK, DE, FR, ES, IT). */
+  flagGb: "/figma/flag-gb.svg",
+  flagDe: "/figma/flag-de.svg",
+  flagFr: "/figma/flag-fr.svg",
+  flagEs: "/figma/flag-es.svg",
+  flagIt: "/figma/flag-it.svg",
   heroEllipse: "/figma/hero-ellipse.svg",
   heroPumpkin: "/figma/hero-pumpkin.svg",
   chevron: "/figma/chevron.svg",
