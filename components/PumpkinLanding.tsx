@@ -65,13 +65,21 @@ export function PumpkinLanding() {
                   <Image src={FIGMA_ASSETS.heroBlob} alt="" fill className="object-contain" />
                 </div>
               </div>
-              <div className="absolute bottom-[8%] right-[10%] w-[28%] max-w-[140px]">
-                <div className="relative aspect-square w-full">
-                  <Image src={FIGMA_ASSETS.heroEllipse} alt="" fill className="object-contain" />
-                </div>
-              </div>
               <div className="relative z-[1] mx-auto w-[72%] max-w-sm lg:w-[80%] lg:max-w-md">
-                <div className="relative aspect-[515/540] w-full">
+                <div
+                  className="pointer-events-none absolute bottom-[2%] left-1/2 z-0 w-[58%] max-w-[220px] -translate-x-1/2 sm:bottom-[3%] sm:w-[52%] lg:bottom-[4%] lg:max-w-[260px]"
+                  aria-hidden
+                >
+                  <div className="relative aspect-[2.4/1] w-full">
+                    <Image
+                      src={FIGMA_ASSETS.heroEllipse}
+                      alt=""
+                      fill
+                      className="object-contain object-bottom"
+                    />
+                  </div>
+                </div>
+                <div className="relative z-[1] aspect-[515/540] w-full">
                   <Image
                     src={FIGMA_ASSETS.heroPumpkin}
                     alt={ui.heroPumpkinAlt}

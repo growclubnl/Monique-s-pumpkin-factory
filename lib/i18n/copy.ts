@@ -5,6 +5,8 @@ export type UiCopy = {
   contact: string;
   route: string;
   languageFlagsAria: string;
+  navOpenMenu: string;
+  navCloseMenu: string;
   heroTitle: string;
   heroLine1: string;
   heroLine2: string;
@@ -56,6 +58,8 @@ export const UI: Record<Locale, UiCopy> = {
     contact: "CONTACT",
     route: "ROUTE",
     languageFlagsAria: "Kies een taal",
+    navOpenMenu: "Menu openen",
+    navCloseMenu: "Menu sluiten",
     heroTitle: "Wij zijn open!",
     heroLine1: "Maandag tot en met zondag",
     heroLine2: "van 08:00 tot 20:00",
@@ -112,6 +116,8 @@ export const UI: Record<Locale, UiCopy> = {
     contact: "CONTACT",
     route: "DIRECTIONS",
     languageFlagsAria: "Choose a language",
+    navOpenMenu: "Open menu",
+    navCloseMenu: "Close menu",
     heroTitle: "We’re open!",
     heroLine1: "Monday through Sunday",
     heroLine2: "8:00 AM – 8:00 PM",
@@ -166,6 +172,8 @@ export const UI: Record<Locale, UiCopy> = {
     contact: "KONTAKT",
     route: "ROUTE",
     languageFlagsAria: "Sprache wählen",
+    navOpenMenu: "Menü öffnen",
+    navCloseMenu: "Menü schließen",
     heroTitle: "Wir haben geöffnet!",
     heroLine1: "Montag bis Sonntag",
     heroLine2: "8:00 – 20:00 Uhr",
@@ -220,6 +228,8 @@ export const UI: Record<Locale, UiCopy> = {
     contact: "CONTACT",
     route: "ITINÉRAIRE",
     languageFlagsAria: "Choisir une langue",
+    navOpenMenu: "Ouvrir le menu",
+    navCloseMenu: "Fermer le menu",
     heroTitle: "Nous sommes ouverts !",
     heroLine1: "Du lundi au dimanche",
     heroLine2: "de 8h à 20h",
@@ -274,6 +284,8 @@ export const UI: Record<Locale, UiCopy> = {
     contact: "CONTACTO",
     route: "CÓMO LLEGAR",
     languageFlagsAria: "Elegir idioma",
+    navOpenMenu: "Abrir menú",
+    navCloseMenu: "Cerrar menú",
     heroTitle: "¡Estamos abiertos!",
     heroLine1: "De lunes a domingo",
     heroLine2: "de 8:00 a 20:00",
@@ -328,6 +340,8 @@ export const UI: Record<Locale, UiCopy> = {
     contact: "CONTATTI",
     route: "INDICAZIONI",
     languageFlagsAria: "Scegli la lingua",
+    navOpenMenu: "Apri menu",
+    navCloseMenu: "Chiudi menu",
     heroTitle: "Siamo aperti!",
     heroLine1: "Dal lunedì alla domenica",
     heroLine2: "dalle 8:00 alle 20:00",

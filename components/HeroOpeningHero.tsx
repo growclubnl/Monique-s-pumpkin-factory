@@ -85,7 +85,29 @@ export function HeroOpeningHero({ ui }: { ui: UiCopy }) {
         {ui.heroCountdownSub}
       </p>
       <div
-        className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
+        className="mt-8 rounded-2xl border border-black/15 bg-white/80 px-2 py-4 shadow-sm backdrop-blur-sm sm:hidden"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div className="grid grid-cols-4 divide-x divide-black/10">
+          {cells.map(({ key, value, label, pad }) => (
+            <div key={key} className="min-w-0 px-1.5 text-center">
+              <div
+                className={`font-gasoek text-[clamp(1.35rem,6.2vw,2rem)] leading-none tabular-nums text-pumpkin-green-dark ${
+                  tick === null ? "text-pumpkin-green-dark/40" : ""
+                }`}
+              >
+                {tick === null ? "–" : pad ? pad2(value) : String(value)}
+              </div>
+              <div className="font-bakbak mt-1.5 text-[0.5625rem] uppercase leading-tight tracking-wider text-pumpkin-orange">
+                {label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div
+        className="mt-8 hidden grid-cols-2 gap-3 sm:grid sm:grid-cols-4 sm:gap-4"
         aria-live="polite"
         aria-atomic="true"
       >
