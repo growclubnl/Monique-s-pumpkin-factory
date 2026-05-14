@@ -32,6 +32,8 @@ export type UiCopy = {
   recipesShowWord: string;
   instagramTitle: string;
   instagramGridAria: string;
+  footerPhoneAria: string;
+  footerPhoneDisplay: string;
   footerLine1: string;
   footerLine2: string;
   recipe: {
@@ -54,7 +56,7 @@ export type UiCopy = {
 
 export const UI: Record<Locale, UiCopy> = {
   nl: {
-    topNotice: "Wij zijn vandaag geopend tot 20:00",
+    topNotice: "De pompoenen zijn geplant, nog even geduld!",
     contact: "CONTACT",
     route: "ROUTE",
     languageFlagsAria: "Kies een taal",
@@ -70,7 +72,7 @@ export const UI: Record<Locale, UiCopy> = {
     countdownHours: "Uren",
     countdownMinutes: "Minuten",
     countdownSeconds: "Seconden",
-    heroSaveCalendar: "IN JE AGENDA",
+    heroSaveCalendar: "Sla de datum in mijn agenda op",
     openingCalendarSummary: "Opening Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "We gaan open. Kom langs tussen de pompoenen — contant of Tikkie. Openingstijden deze dag 08:00–20:00.",
@@ -90,6 +92,8 @@ export const UI: Record<Locale, UiCopy> = {
     recipesShowWord: "TOON RECEPT",
     instagramTitle: "Volg ons op Instagram",
     instagramGridAria: "Bekijk @pumpkin.factory op Instagram",
+    footerPhoneAria: "Bel ons",
+    footerPhoneDisplay: "06 26102741",
     footerLine1: "Maandag tot en met zondag",
     footerLine2: "van 09:00 tot 20:00",
     recipe: {
@@ -112,7 +116,7 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   en: {
-    topNotice: "We’re open today until 8:00 PM",
+    topNotice: "The pumpkins are planted — hang tight a little longer!",
     contact: "CONTACT",
     route: "DIRECTIONS",
     languageFlagsAria: "Choose a language",
@@ -128,7 +132,7 @@ export const UI: Record<Locale, UiCopy> = {
     countdownHours: "Hours",
     countdownMinutes: "Minutes",
     countdownSeconds: "Seconds",
-    heroSaveCalendar: "ADD TO CALENDAR",
+    heroSaveCalendar: "Save the date to my calendar",
     openingCalendarSummary: "Monique’s Pumpkin Factory — opening day",
     openingCalendarDescription:
       "We’re open! Stroll among the pumpkins. Pay with cash or Tikkie. Hours today 8:00 AM – 8:00 PM.",
@@ -147,6 +151,8 @@ export const UI: Record<Locale, UiCopy> = {
     recipesShowWord: "SHOW RECIPE",
     instagramTitle: "Follow us on Instagram",
     instagramGridAria: "Open @pumpkin.factory on Instagram",
+    footerPhoneAria: "Call us",
+    footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Monday through Sunday",
     footerLine2: "9:00 AM – 8:00 PM",
     recipe: {
@@ -168,7 +174,7 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   de: {
-    topNotice: "Heute sind wir bis 20:00 Uhr geöffnet",
+    topNotice: "Die Kürbisse sind gepflanzt — nur noch ein bisschen Geduld!",
     contact: "KONTAKT",
     route: "ROUTE",
     languageFlagsAria: "Sprache wählen",
@@ -184,7 +190,7 @@ export const UI: Record<Locale, UiCopy> = {
     countdownHours: "Stunden",
     countdownMinutes: "Minuten",
     countdownSeconds: "Sekunden",
-    heroSaveCalendar: "IM KALENDER SPEICHERN",
+    heroSaveCalendar: "Datum in meinem Kalender speichern",
     openingCalendarSummary: "Eröffnung Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Wir öffnen. Schau vorbei zwischen den Kürbissen. Bar oder Tikkie. Heute 8:00–20:00 Uhr.",
@@ -203,6 +209,8 @@ export const UI: Record<Locale, UiCopy> = {
     recipesShowWord: "REZEPT ZEIGEN",
     instagramTitle: "Folgt uns auf Instagram",
     instagramGridAria: "@pumpkin.factory auf Instagram öffnen",
+    footerPhoneAria: "Uns anrufen",
+    footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Montag bis Sonntag",
     footerLine2: "9:00 – 20:00 Uhr",
     recipe: {
@@ -224,7 +232,7 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   fr: {
-    topNotice: "Ouvert aujourd’hui jusqu’à 20h",
+    topNotice: "Les courges sont plantées — encore un peu de patience !",
     contact: "CONTACT",
     route: "ITINÉRAIRE",
     languageFlagsAria: "Choisir une langue",
@@ -240,7 +248,7 @@ export const UI: Record<Locale, UiCopy> = {
     countdownHours: "Heures",
     countdownMinutes: "Minutes",
     countdownSeconds: "Secondes",
-    heroSaveCalendar: "AJOUTER AU CALENDRIER",
+    heroSaveCalendar: "Enregistrer la date dans mon calendrier",
     openingCalendarSummary: "Ouverture Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Nous ouvrons. Venez voir les courges. Espèces ou Tikkie. Aujourd’hui 8h–20h.",
@@ -259,6 +267,8 @@ export const UI: Record<Locale, UiCopy> = {
     recipesShowWord: "AFFICHER LA RECETTE",
     instagramTitle: "Suivez-nous sur Instagram",
     instagramGridAria: "Voir @pumpkin.factory sur Instagram",
+    footerPhoneAria: "Nous appeler",
+    footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Du lundi au dimanche",
     footerLine2: "de 9h à 20h",
     recipe: {
@@ -280,7 +290,7 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   es: {
-    topNotice: "Hoy abrimos hasta las 20:00",
+    topNotice: "¡Las calabazas ya están plantadas — un poco más de paciencia!",
     contact: "CONTACTO",
     route: "CÓMO LLEGAR",
     languageFlagsAria: "Elegir idioma",
@@ -296,7 +306,7 @@ export const UI: Record<Locale, UiCopy> = {
     countdownHours: "Horas",
     countdownMinutes: "Minutos",
     countdownSeconds: "Segundos",
-    heroSaveCalendar: "AÑADIR AL CALENDARIO",
+    heroSaveCalendar: "Guardar la fecha en mi calendario",
     openingCalendarSummary: "Apertura Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Abrimos. Ven a ver las calabazas. Efectivo o Tikkie. Hoy 8:00–20:00.",
@@ -315,6 +325,8 @@ export const UI: Record<Locale, UiCopy> = {
     recipesShowWord: "VER RECETA",
     instagramTitle: "Síguenos en Instagram",
     instagramGridAria: "Ver @pumpkin.factory en Instagram",
+    footerPhoneAria: "Llámanos",
+    footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "De lunes a domingo",
     footerLine2: "de 9:00 a 20:00",
     recipe: {
@@ -336,7 +348,7 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   it: {
-    topNotice: "Oggi siamo aperti fino alle 20:00",
+    topNotice: "Le zucche sono state piantate — ancora un po’ di pazienza!",
     contact: "CONTATTI",
     route: "INDICAZIONI",
     languageFlagsAria: "Scegli la lingua",
@@ -352,7 +364,7 @@ export const UI: Record<Locale, UiCopy> = {
     countdownHours: "Ore",
     countdownMinutes: "Minuti",
     countdownSeconds: "Secondi",
-    heroSaveCalendar: "AGGIUNGI AL CALENDARIO",
+    heroSaveCalendar: "Salva la data nel mio calendario",
     openingCalendarSummary: "Apertura Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Apriamo. Vieni tra le zucche. Contanti o Tikkie. Oggi 8:00–20:00.",
@@ -371,6 +383,8 @@ export const UI: Record<Locale, UiCopy> = {
     recipesShowWord: "MOSTRA RICETTA",
     instagramTitle: "Seguici su Instagram",
     instagramGridAria: "Apri @pumpkin.factory su Instagram",
+    footerPhoneAria: "Chiamaci",
+    footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Dal lunedì alla domenica",
     footerLine2: "dalle 9:00 alle 20:00",
     recipe: {

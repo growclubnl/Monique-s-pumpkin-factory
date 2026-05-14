@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${anonymousPro.variable} ${bakbakOne.variable} ${gasoekOne.variable} antialiased`}
       >

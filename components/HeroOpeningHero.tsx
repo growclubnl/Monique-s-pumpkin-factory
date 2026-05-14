@@ -133,7 +133,7 @@ export function HeroOpeningHero({ ui }: { ui: UiCopy }) {
         <button
           type="button"
           onClick={saveOpeningCalendar}
-          className="font-bakbak inline-flex h-14 min-w-[180px] cursor-pointer items-center justify-center rounded-full bg-white px-8 text-lg text-black transition hover:bg-neutral-100 sm:px-10 sm:text-xl"
+          className="font-bakbak inline-flex min-h-14 min-w-[180px] max-w-[22rem] cursor-pointer items-center justify-center rounded-full bg-white px-5 py-3 text-center text-base leading-snug text-black transition hover:bg-neutral-100 sm:px-8 sm:text-lg"
         >
           {ui.heroSaveCalendar}
         </button>

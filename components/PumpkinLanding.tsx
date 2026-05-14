@@ -5,7 +5,7 @@ import { HeroOpeningHero } from "@/components/HeroOpeningHero";
 import { FIGMA_ASSETS } from "@/lib/figma-assets";
 import { RecipeCard } from "@/components/RecipeCard";
 import { SiteHeader } from "@/components/SiteHeader";
-import { UI, FAQ, getRecipes, type FaqItem } from "@/lib/i18n";
+import { UI, FAQ, getRecipes, HTML_LANG, type FaqItem } from "@/lib/i18n";
 import { useLanguage } from "@/components/LanguageProvider";
 
 function FaqPill({ item }: { item: FaqItem }) {
@@ -210,8 +210,13 @@ export function PumpkinLanding() {
         <p className="mt-8 text-lg sm:text-xl">Akervoorderlaan 1, 2161 DP Lisse</p>
         <div className="mt-4 space-y-1 text-base sm:text-lg">
           <p>
-            <a href="tel:+31626102741" className="underline-offset-2 hover:underline">
-              +31626102741
+            <a
+              href="tel:+31626102741"
+              className="underline-offset-2 hover:underline"
+              aria-label={ui.footerPhoneAria}
+              lang={HTML_LANG[locale]}
+            >
+              {ui.footerPhoneDisplay}
             </a>
           </p>
           <p>{ui.footerLine1}</p>

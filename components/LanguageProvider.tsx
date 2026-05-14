@@ -8,9 +8,21 @@ import {
   useMemo,
   useState,
 } from "react";
-import { HTML_LANG, type Locale } from "@/lib/i18n/types";
+import { HTML_LANG, LOCALES, type Locale } from "@/lib/i18n/types";
 
 const STORAGE_KEY = "mpf-locale";
+
+const LOCALE_SET = new Set<string>(LOCALES);
+
+function detectVisitorLocale(): Locale {
+  if (typeof navigator === "undefined") return "en";
+  const tags = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const tag of tags) {
+    const base = tag.toLowerCase().split("-")[0];
+    if (LOCALE_SET.has(base)) return base as Locale;
+  }
+  return "en";
+}
 
 type Ctx = {
   locale: Locale;
@@ -23,9 +35,7 @@ function readStoredLocale(): Locale | null {
   if (typeof window === "undefined") return null;
   try {
     const v = localStorage.getItem(STORAGE_KEY);
-    if (v === "nl" || v === "en" || v === "de" || v === "fr" || v === "es" || v === "it") {
-      return v;
-    }
+    if (v && LOCALE_SET.has(v)) return v as Locale;
   } catch {
     /* ignore */
   }
@@ -33,12 +43,12 @@ function readStoredLocale(): Locale | null {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("nl");
+  const [locale, setLocaleState] = useState<Locale>("en");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const stored = readStoredLocale();
-    if (stored) setLocaleState(stored);
+    setLocaleState(stored ?? detectVisitorLocale());
     setReady(true);
   }, []);
 
