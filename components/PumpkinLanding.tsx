@@ -1,11 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { HeroOpeningHero } from "@/components/HeroOpeningHero";
 import { FIGMA_ASSETS } from "@/lib/figma-assets";
 import { RecipeCard } from "@/components/RecipeCard";
 import { SiteHeader } from "@/components/SiteHeader";
 import { UI, FAQ, getRecipes, HTML_LANG, type FaqItem } from "@/lib/i18n";
+import { buildCombinedRecipesHtml } from "@/lib/recipe-html";
+import { fetchLogoSvg } from "@/lib/recipe-logo";
+import { openHtmlPrintDialog } from "@/lib/recipe-print";
 import { useLanguage } from "@/components/LanguageProvider";
 
 function FaqPill({ item }: { item: FaqItem }) {
@@ -31,8 +35,33 @@ function FaqPill({ item }: { item: FaqItem }) {
 export function PumpkinLanding() {
   const { locale } = useLanguage();
   const ui = UI[locale];
+  const uiRecipe = ui.recipe;
   const faq = FAQ[locale];
   const dishes = getRecipes(locale);
+  const [allRecipesPdfBusy, setAllRecipesPdfBusy] = useState(false);
+
+  const handleAllRecipesPdf = async () => {
+    setAllRecipesPdfBusy(true);
+    try {
+      const logoSvg = await fetchLogoSvg();
+      const html = buildCombinedRecipesHtml(
+        dishes,
+        logoSvg,
+        {
+          lang: HTML_LANG[locale],
+          htmlServings: uiRecipe.htmlServings,
+          htmlTime: uiRecipe.htmlTime,
+          htmlIngredients: uiRecipe.htmlIngredients,
+          htmlMethod: uiRecipe.htmlMethod,
+          htmlFooter: uiRecipe.htmlFooter,
+        },
+        ui.recipesBundleTitle,
+      );
+      openHtmlPrintDialog(html);
+    } finally {
+      setAllRecipesPdfBusy(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white text-black">
@@ -126,7 +155,6 @@ export function PumpkinLanding() {
               </div>
             </div>
           </div>
-          <div className="mt-16 h-2 bg-pumpkin-accent-bar sm:mt-24" aria-hidden />
         </div>
       </section>
       <section className="bg-white px-4 py-12 sm:px-8 lg:px-16 lg:py-16">
@@ -156,6 +184,19 @@ export function PumpkinLanding() {
             <span className="font-bakbak text-pumpkin-orange">{ui.recipesShowWord}</span>
             {ui.recipesIntroEnd}
           </p>
+          <div className="mx-auto mt-8 flex max-w-lg flex-col items-center gap-2 sm:mt-10">
+            <button
+              type="button"
+              onClick={handleAllRecipesPdf}
+              disabled={allRecipesPdfBusy}
+              className="font-bakbak inline-flex min-h-11 w-full max-w-md items-center justify-center rounded-full bg-pumpkin-orange px-6 text-sm tracking-wide text-white transition hover:bg-orange-500 disabled:opacity-60 sm:text-base"
+            >
+              {allRecipesPdfBusy ? uiRecipe.busy : ui.recipesDownloadAllPdf}
+            </button>
+            <p className="text-center text-xs leading-snug text-neutral-600 sm:text-sm">
+              {ui.recipesDownloadAllHint}
+            </p>
+          </div>
         </div>
         <div className="mx-auto mt-12 grid max-w-6xl gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {dishes.map((dish, i) => (
@@ -164,38 +205,42 @@ export function PumpkinLanding() {
         </div>
       </section>
       <section className="border-t border-neutral-200 bg-white px-4 py-10 sm:px-8 lg:px-12">
-        <div className="mx-auto mb-6 flex max-w-[1920px] flex-col items-center gap-2 text-center sm:flex-row sm:justify-between sm:text-left">
-          <h2 className="font-gasoek text-2xl text-pumpkin-orange sm:text-3xl">
-            {ui.instagramTitle}
-          </h2>
-          <a
-            href="https://www.instagram.com/pumpkin.factory/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bakbak inline-flex items-center gap-2 rounded-full bg-pumpkin-orange px-6 py-3 text-base text-white transition hover:bg-orange-500"
-          >
-            @pumpkin.factory
-          </a>
-        </div>
-        <div className="mx-auto grid max-w-[1920px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
-          {Array.from({ length: 5 }).map((_, i) => (
+        <div className="mx-auto flex max-w-[1920px] flex-col items-center gap-6 text-center sm:flex-row sm:justify-center sm:gap-10">
+          <h2 className="font-gasoek text-2xl text-pumpkin-orange sm:text-3xl">{ui.socialTitle}</h2>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              key={i}
               href="https://www.instagram.com/pumpkin.factory/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={ui.instagramGridAria}
-              className="group relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-[#fdf497] via-[#fd5949] to-[#d6249f] transition hover:opacity-90"
+              aria-label={ui.socialInstagramAria}
+              className="font-bakbak inline-flex items-center gap-2.5 rounded-full bg-pumpkin-orange px-6 py-3 text-base text-white transition hover:bg-orange-500"
             >
               <Image
                 src={FIGMA_ASSETS.socialInstagram}
                 alt=""
-                width={64}
-                height={64}
-                className="opacity-95 transition-transform duration-200 group-hover:scale-110"
+                width={24}
+                height={24}
+                className="shrink-0 object-contain"
               />
+              @pumpkin.factory
             </a>
-          ))}
+            <a
+              href="https://www.tiktok.com/@moniquepumpkinfactory"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={ui.socialTiktokAria}
+              className="font-bakbak inline-flex items-center gap-2.5 rounded-full bg-pumpkin-orange px-6 py-3 text-base text-white transition hover:bg-orange-500"
+            >
+              <Image
+                src={FIGMA_ASSETS.socialTiktok}
+                alt=""
+                width={24}
+                height={24}
+                className="shrink-0 object-contain"
+              />
+              @moniquepumpkinfactory
+            </a>
+          </div>
         </div>
       </section>
       <footer id="contact" className="bg-pumpkin-orange px-4 py-14 text-center text-white sm:py-20">
@@ -228,7 +273,7 @@ export function PumpkinLanding() {
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-90 transition hover:opacity-100"
-            aria-label="Instagram"
+            aria-label={ui.socialInstagramAria}
           >
             <Image src={FIGMA_ASSETS.socialInstagram} alt="" width={35} height={35} />
           </a>
@@ -242,11 +287,11 @@ export function PumpkinLanding() {
             <Image src={FIGMA_ASSETS.socialFacebook} alt="" width={34} height={35} />
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://www.tiktok.com/@moniquepumpkinfactory"
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-90 transition hover:opacity-100"
-            aria-label="TikTok"
+            aria-label={ui.socialTiktokAria}
           >
             <Image src={FIGMA_ASSETS.socialTiktok} alt="" width={37} height={37} />
           </a>

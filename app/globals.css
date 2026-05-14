@@ -8,7 +8,6 @@
   --pumpkin-green-dark: #114421;
   --pumpkin-orange: #ff8c00;
   --pumpkin-body: #224127;
-  --pumpkin-accent-bar: #ea9125;
 }
 
 @theme inline {
@@ -19,7 +18,6 @@
   --color-pumpkin-green-dark: var(--pumpkin-green-dark);
   --color-pumpkin-orange: var(--pumpkin-orange);
   --color-pumpkin-body: var(--pumpkin-body);
-  --color-pumpkin-accent-bar: var(--pumpkin-accent-bar);
 }
 
 body {

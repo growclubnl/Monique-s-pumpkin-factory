@@ -30,8 +30,12 @@ export type UiCopy = {
   recipesIntroStart: string;
   recipesIntroEnd: string;
   recipesShowWord: string;
-  instagramTitle: string;
-  instagramGridAria: string;
+  recipesBundleTitle: string;
+  recipesDownloadAllPdf: string;
+  recipesDownloadAllHint: string;
+  socialTitle: string;
+  socialInstagramAria: string;
+  socialTiktokAria: string;
   footerPhoneAria: string;
   footerPhoneDisplay: string;
   footerLine1: string;
@@ -43,9 +47,8 @@ export type UiCopy = {
     method: string;
     showRecipe: string;
     hideRecipe: string;
-    downloadRecipe: string;
+    savePdf: string;
     busy: string;
-    downloadHint: string;
     htmlServings: string;
     htmlTime: string;
     htmlIngredients: string;
@@ -88,10 +91,15 @@ export const UI: Record<Locale, UiCopy> = {
     recipesIntroStart:
       "Pompoen is het meest veelzijdige seizoensingrediënt. Zes Nederlandse klassiekers om je te inspireren — klik op ",
     recipesIntroEnd:
-      " om het recept te bekijken of download het direct met logo.",
+      " om het recept hier uit te klappen of als PDF op te slaan (via het printvenster).",
     recipesShowWord: "TOON RECEPT",
-    instagramTitle: "Volg ons op Instagram",
-    instagramGridAria: "Bekijk @pumpkin.factory op Instagram",
+    recipesBundleTitle: "Alle recepten — Monique’s Pumpkin Factory",
+    recipesDownloadAllPdf: "ALLE RECEPTEN ALS PDF",
+    recipesDownloadAllHint:
+      "Opent printen. Kies ‘Opslaan als PDF’ om alle recepten in één document te bewaren.",
+    socialTitle: "Volg ons",
+    socialInstagramAria: "Bekijk @pumpkin.factory op Instagram",
+    socialTiktokAria: "Bekijk @moniquepumpkinfactory op TikTok",
     footerPhoneAria: "Bel ons",
     footerPhoneDisplay: "06 26102741",
     footerLine1: "Maandag tot en met zondag",
@@ -103,10 +111,8 @@ export const UI: Record<Locale, UiCopy> = {
       method: "Bereiding",
       showRecipe: "TOON RECEPT",
       hideRecipe: "VERBERG RECEPT",
-      downloadRecipe: "DOWNLOAD RECEPT",
+      savePdf: "PDF",
       busy: "BEZIG…",
-      downloadHint:
-        "HTML-bestand met logo — open en print desgewenst als PDF.",
       htmlServings: "Personen",
       htmlTime: "Bereidingstijd",
       htmlIngredients: "Ingrediënten",
@@ -147,10 +153,15 @@ export const UI: Record<Locale, UiCopy> = {
     recipesTitle: "From soup to cake",
     recipesIntroStart:
       "Pumpkin is the most versatile seasonal ingredient. Six Dutch-inspired classics to spark your ideas — tap ",
-    recipesIntroEnd: " to read it or download it with our logo.",
+    recipesIntroEnd: " to expand the recipe here or save it as a PDF (print dialog).",
     recipesShowWord: "SHOW RECIPE",
-    instagramTitle: "Follow us on Instagram",
-    instagramGridAria: "Open @pumpkin.factory on Instagram",
+    recipesBundleTitle: "All recipes — Monique’s Pumpkin Factory",
+    recipesDownloadAllPdf: "DOWNLOAD ALL AS PDF",
+    recipesDownloadAllHint:
+      "Opens print. Choose “Save as PDF” to get one file with every recipe.",
+    socialTitle: "Follow us",
+    socialInstagramAria: "Open @pumpkin.factory on Instagram",
+    socialTiktokAria: "Open @moniquepumpkinfactory on TikTok",
     footerPhoneAria: "Call us",
     footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Monday through Sunday",
@@ -162,9 +173,8 @@ export const UI: Record<Locale, UiCopy> = {
       method: "Method",
       showRecipe: "SHOW RECIPE",
       hideRecipe: "HIDE RECIPE",
-      downloadRecipe: "DOWNLOAD RECIPE",
+      savePdf: "PDF",
       busy: "WAIT…",
-      downloadHint: "HTML file with logo — open and print as PDF if you like.",
       htmlServings: "Serves",
       htmlTime: "Time",
       htmlIngredients: "Ingredients",
@@ -205,10 +215,16 @@ export const UI: Record<Locale, UiCopy> = {
     recipesTitle: "Von Suppe bis Kuchen",
     recipesIntroStart:
       "Kürbis ist das vielseitigste Saisongemüse. Sechs holland inspirierte Klassiker — tippe auf ",
-    recipesIntroEnd: ", lies das Rezept oder lade es mit Logo herunter.",
+    recipesIntroEnd:
+      ", um das Rezept hier auszuklappen oder als PDF zu speichern (Druckdialog).",
     recipesShowWord: "REZEPT ZEIGEN",
-    instagramTitle: "Folgt uns auf Instagram",
-    instagramGridAria: "@pumpkin.factory auf Instagram öffnen",
+    recipesBundleTitle: "Alle Rezepte — Monique’s Pumpkin Factory",
+    recipesDownloadAllPdf: "ALLE ALS PDF",
+    recipesDownloadAllHint:
+      "Öffnet Drucken. Wähle „Als PDF speichern“, um alle Rezepte in einer Datei zu sichern.",
+    socialTitle: "Folgt uns",
+    socialInstagramAria: "@pumpkin.factory auf Instagram öffnen",
+    socialTiktokAria: "@moniquepumpkinfactory auf TikTok öffnen",
     footerPhoneAria: "Uns anrufen",
     footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Montag bis Sonntag",
@@ -220,9 +236,8 @@ export const UI: Record<Locale, UiCopy> = {
       method: "Zubereitung",
       showRecipe: "REZEPT ZEIGEN",
       hideRecipe: "AUSBLENDEN",
-      downloadRecipe: "REZEPT LADEN",
+      savePdf: "PDF",
       busy: "BITTE WARTEN…",
-      downloadHint: "HTML-Datei mit Logo — zum Öffnen und Drucken als PDF.",
       htmlServings: "Portionen",
       htmlTime: "Zubereitungszeit",
       htmlIngredients: "Zutaten",
@@ -263,10 +278,16 @@ export const UI: Record<Locale, UiCopy> = {
     recipesTitle: "De la soupe au gâteau",
     recipesIntroStart:
       "La courge est l’ingrédient de saison le plus polyvalent. Six classiques inspirés des Pays-Bas — cliquez sur ",
-    recipesIntroEnd: " pour lire la recette ou téléchargez-la avec le logo.",
+    recipesIntroEnd:
+      " pour déplier la recette ici ou l’enregistrer en PDF (fenêtre d’impression).",
     recipesShowWord: "AFFICHER LA RECETTE",
-    instagramTitle: "Suivez-nous sur Instagram",
-    instagramGridAria: "Voir @pumpkin.factory sur Instagram",
+    recipesBundleTitle: "Toutes les recettes — Monique’s Pumpkin Factory",
+    recipesDownloadAllPdf: "TOUT TÉLÉCHARGER EN PDF",
+    recipesDownloadAllHint:
+      "Ouvre l’impression. Choisissez « Enregistrer au format PDF » pour un seul fichier.",
+    socialTitle: "Suivez-nous",
+    socialInstagramAria: "Voir @pumpkin.factory sur Instagram",
+    socialTiktokAria: "Voir @moniquepumpkinfactory sur TikTok",
     footerPhoneAria: "Nous appeler",
     footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Du lundi au dimanche",
@@ -278,9 +299,8 @@ export const UI: Record<Locale, UiCopy> = {
       method: "Préparation",
       showRecipe: "AFFICHER LA RECETTE",
       hideRecipe: "MASQUER",
-      downloadRecipe: "TÉLÉCHARGER",
+      savePdf: "PDF",
       busy: "PATIENTEZ…",
-      downloadHint: "Fichier HTML avec logo — ouvrez-le et imprimez en PDF.",
       htmlServings: "Portions",
       htmlTime: "Temps",
       htmlIngredients: "Ingrédients",
@@ -321,10 +341,16 @@ export const UI: Record<Locale, UiCopy> = {
     recipesTitle: "De sopa a tarta",
     recipesIntroStart:
       "La calabaza es el ingrediente de temporada más versátil. Seis clásicos con inspiración holandesa — pulsa ",
-    recipesIntroEnd: " para leerla o descárgala con el logo.",
+    recipesIntroEnd:
+      " para desplegar la receta aquí o guardarla en PDF (cuadro de impresión).",
     recipesShowWord: "VER RECETA",
-    instagramTitle: "Síguenos en Instagram",
-    instagramGridAria: "Ver @pumpkin.factory en Instagram",
+    recipesBundleTitle: "Todas las recetas — Monique’s Pumpkin Factory",
+    recipesDownloadAllPdf: "DESCARGAR TODO EN PDF",
+    recipesDownloadAllHint:
+      "Abre imprimir. Elige «Guardar como PDF» para un solo archivo con todas las recetas.",
+    socialTitle: "Síguenos",
+    socialInstagramAria: "Ver @pumpkin.factory en Instagram",
+    socialTiktokAria: "Ver @moniquepumpkinfactory en TikTok",
     footerPhoneAria: "Llámanos",
     footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "De lunes a domingo",
@@ -336,9 +362,8 @@ export const UI: Record<Locale, UiCopy> = {
       method: "Preparación",
       showRecipe: "VER RECETA",
       hideRecipe: "OCULTAR",
-      downloadRecipe: "DESCARGAR RECETA",
+      savePdf: "PDF",
       busy: "ESPERA…",
-      downloadHint: "Archivo HTML con logo — ábrelo e imprime en PDF si quieres.",
       htmlServings: "Raciones",
       htmlTime: "Tiempo",
       htmlIngredients: "Ingredientes",
@@ -379,10 +404,16 @@ export const UI: Record<Locale, UiCopy> = {
     recipesTitle: "Dalla zuppa alla torta",
     recipesIntroStart:
       "La zucca è l’ingrediente stagionale più versatile. Sei classici ispirati ai Paesi Bassi — clicca ",
-    recipesIntroEnd: " per leggerla o scaricala con il logo.",
+    recipesIntroEnd:
+      " per aprire la ricetta qui o salvarla in PDF (finestra di stampa).",
     recipesShowWord: "MOSTRA RICETTA",
-    instagramTitle: "Seguici su Instagram",
-    instagramGridAria: "Apri @pumpkin.factory su Instagram",
+    recipesBundleTitle: "Tutte le ricette — Monique’s Pumpkin Factory",
+    recipesDownloadAllPdf: "SCARICA TUTTO IN PDF",
+    recipesDownloadAllHint:
+      "Apre la stampa. Scegli «Salva come PDF» per un unico file con tutte le ricette.",
+    socialTitle: "Seguici",
+    socialInstagramAria: "Apri @pumpkin.factory su Instagram",
+    socialTiktokAria: "Apri @moniquepumpkinfactory su TikTok",
     footerPhoneAria: "Chiamaci",
     footerPhoneDisplay: "+31 6 26102741",
     footerLine1: "Dal lunedì alla domenica",
@@ -394,9 +425,8 @@ export const UI: Record<Locale, UiCopy> = {
       method: "Preparazione",
       showRecipe: "MOSTRA RICETTA",
       hideRecipe: "NASCONDI",
-      downloadRecipe: "SCARICA RICETTA",
+      savePdf: "PDF",
       busy: "ATTENDI…",
-      downloadHint: "File HTML con logo — aprilo e stampa in PDF se vuoi.",
       htmlServings: "Persone",
       htmlTime: "Tempo",
       htmlIngredients: "Ingredienti",
