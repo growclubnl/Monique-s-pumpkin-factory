@@ -79,7 +79,7 @@ export const UI: Record<Locale, UiCopy> = {
     openingCalendarSummary: "Opening Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "We gaan open. Kom langs tussen de pompoenen — contant of Tikkie. Openingstijden deze dag 08:00–20:00.",
-    howItWorksTitle: "Zo werkt het",
+    howItWorksTitle: "Pompoenen zelf uitzoeken",
     howItWorksP1:
       "Bij de Pumpkin Factory houden we het graag eenvoudig en gemoedelijk. Iedereen is welkom om rustig rond te lopen tussen de pompoenen, te kijken, te vergelijken en de mooiste exemplaren uit te zoeken. Of je nu komt voor decoratie, om te koken of gewoon voor de gezelligheid, neem mee wat je aanspreekt en geniet van de sfeer van het seizoen.",
     howItWorksP2:
@@ -142,7 +142,7 @@ export const UI: Record<Locale, UiCopy> = {
     openingCalendarSummary: "Monique’s Pumpkin Factory — opening day",
     openingCalendarDescription:
       "We’re open! Stroll among the pumpkins. Pay with cash or Tikkie. Hours today 8:00 AM – 8:00 PM.",
-    howItWorksTitle: "How it works",
+    howItWorksTitle: "Pick your own pumpkins",
     howItWorksP1:
       "At the Pumpkin Factory we like to keep things simple and friendly. Everyone is welcome to stroll among the pumpkins, compare shapes and colours, and pick their favourites. Whether you’re here for décor, cooking, or just the autumn vibe, take what you like and enjoy the season with us.",
     howItWorksP2:
@@ -204,7 +204,7 @@ export const UI: Record<Locale, UiCopy> = {
     openingCalendarSummary: "Eröffnung Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Wir öffnen. Schau vorbei zwischen den Kürbissen. Bar oder Tikkie. Heute 8:00–20:00 Uhr.",
-    howItWorksTitle: "So funktioniert’s",
+    howItWorksTitle: "Kürbisse selbst aussuchen",
     howItWorksP1:
       "Bei der Pumpkin Factory halten wir es gern einfach und herzlich. Alle sind willkommen, zwischen den Kürbissen zu schlendern, zu vergleichen und ihre Favoriten zu finden. Ob Deko, Kochen oder einfach Stimmung — nehmt mit, was euch gefällt, und genießt die Saison.",
     howItWorksP2:
@@ -267,7 +267,7 @@ export const UI: Record<Locale, UiCopy> = {
     openingCalendarSummary: "Ouverture Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Nous ouvrons. Venez voir les courges. Espèces ou Tikkie. Aujourd’hui 8h–20h.",
-    howItWorksTitle: "Comment ça marche",
+    howItWorksTitle: "Choisissez vos citrouilles",
     howItWorksP1:
       "À la Pumpkin Factory, on aime la simplicité et la convivialité. Tout le monde peut se promener entre les courges, comparer et choisir ses préférées. Pour la déco, la cuisine ou juste l’ambiance d’automne — emportez ce qui vous plaît.",
     howItWorksP2:
@@ -330,7 +330,7 @@ export const UI: Record<Locale, UiCopy> = {
     openingCalendarSummary: "Apertura Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Abrimos. Ven a ver las calabazas. Efectivo o Tikkie. Hoy 8:00–20:00.",
-    howItWorksTitle: "Cómo funciona",
+    howItWorksTitle: "Elige tus calabazas",
     howItWorksP1:
       "En Pumpkin Factory nos gusta mantenerlo sencillo y acogedor. Todos pueden pasear entre las calabazas, comparar y elegir sus favoritas. Ya sea para decorar, cocinar o el ambiente otoñal — llévate lo que te guste.",
     howItWorksP2:
@@ -393,7 +393,7 @@ export const UI: Record<Locale, UiCopy> = {
     openingCalendarSummary: "Apertura Monique’s Pumpkin Factory",
     openingCalendarDescription:
       "Apriamo. Vieni tra le zucche. Contanti o Tikkie. Oggi 8:00–20:00.",
-    howItWorksTitle: "Come funziona",
+    howItWorksTitle: "Scegli le tue zucche",
     howItWorksP1:
       "Alla Pumpkin Factory teniamo a un’atmosfera semplice e accogliente. Tutti possono passeggiare tra le zucche, confrontarle e scegliere le preferite. Che sia per decorare, cucinare o solo per l’autunno — porta via ciò che ti piace.",
     howItWorksP2:
