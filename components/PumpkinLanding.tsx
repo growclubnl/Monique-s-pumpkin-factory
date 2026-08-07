@@ -278,7 +278,7 @@ export function PumpkinLanding() {
             <Image src={FIGMA_ASSETS.socialInstagram} alt="" width={35} height={35} />
           </a>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/pumpkinfactorylisse/"
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-90 transition hover:opacity-100"
