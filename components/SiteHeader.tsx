@@ -82,7 +82,7 @@ export function SiteHeader() {
         aria-label="Main"
       >
         <a
-          href="mailto:info@pumpkinfactory.nl"
+          href="mailto:kwekerijkweeklust@gmail.com"
           className="font-bakbak text-xl tracking-wide text-pumpkin-green-dark hover:underline"
         >
           {ui.contact}
@@ -241,7 +241,7 @@ export function SiteHeader() {
           </div>
           <div className="flex flex-1 flex-col gap-8 overflow-y-auto px-6 py-10">
             <a
-              href="mailto:info@pumpkinfactory.nl"
+              href="mailto:kwekerijkweeklust@gmail.com"
               className="font-bakbak text-2xl tracking-wide text-pumpkin-green-dark"
               onClick={closeMobile}
             >
