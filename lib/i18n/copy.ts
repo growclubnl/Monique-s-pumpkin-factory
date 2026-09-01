@@ -460,6 +460,11 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
         q: "Kan ik pompoenen reserveren?",
         a: "Helaas is het niet mogelijk om pompoenen te reserveren. Kom op tijd langs voor de beste keuze!",
       },
+      {
+        id: "harvest",
+        q: "Kan ik de pompoenen ook zelf oogsten?",
+        a: "Alle pompoenen zijn geoogst door onze vrijwilligers en liggen in onze tuin! Zelf oogsten is dus niet mogelijk.",
+      },
     ],
     colB: [
       {
@@ -505,6 +510,11 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
         id: "reserve",
         q: "Can I reserve pumpkins?",
         a: "Sorry, reservations aren’t possible. Come early for the best pick.",
+      },
+      {
+        id: "harvest",
+        q: "Can I harvest the pumpkins myself?",
+        a: "All pumpkins have already been harvested by our volunteers and are waiting in our garden — so picking them yourself isn’t possible.",
       },
     ],
     colB: [
@@ -552,6 +562,11 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
         q: "Kann ich reservieren?",
         a: "Leider nein. Komm früh für die beste Auswahl.",
       },
+      {
+        id: "harvest",
+        q: "Kann ich die Kürbisse selbst ernten?",
+        a: "Alle Kürbisse wurden von unseren Freiwilligen geerntet und liegen in unserem Garten — selbst ernten ist daher nicht möglich.",
+      },
     ],
     colB: [
       {
@@ -597,6 +612,11 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
         id: "reserve",
         q: "Puis-je réserver ?",
         a: "Non — venez tôt pour le meilleur choix.",
+      },
+      {
+        id: "harvest",
+        q: "Puis-je récolter les courges moi-même ?",
+        a: "Toutes les courges ont déjà été récoltées par nos bénévoles et vous attendent dans notre jardin — la cueillette n’est donc pas possible.",
       },
     ],
     colB: [
@@ -644,6 +664,11 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
         q: "¿Puedo reservar?",
         a: "No — ven pronto para elegir mejor.",
       },
+      {
+        id: "harvest",
+        q: "¿Puedo cosechar las calabazas yo mismo?",
+        a: "Todas las calabazas ya han sido cosechadas por nuestros voluntarios y están en nuestro jardín, así que no es posible recogerlas tú mismo.",
+      },
     ],
     colB: [
       {
@@ -689,6 +714,11 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
         id: "reserve",
         q: "Si può prenotare?",
         a: "No — arriva presto per la scelta migliore.",
+      },
+      {
+        id: "harvest",
+        q: "Posso raccogliere le zucche da solo?",
+        a: "Tutte le zucche sono già state raccolte dai nostri volontari e ti aspettano in giardino — quindi non è possibile raccoglierle da soli.",
       },
     ],
     colB: [
