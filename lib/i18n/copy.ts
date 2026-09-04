@@ -435,6 +435,69 @@ export const UI: Record<Locale, UiCopy> = {
         "Ricetta di <strong>Monique&#39;s Pumpkin Factory</strong> — Akervoorderlaan 1, 2161 DP Lisse, Paesi Bassi",
     },
   },
+  pl: {
+    topNotice: "Dynie są już posadzone — jeszcze trochę cierpliwości!",
+    contact: "KONTAKT",
+    route: "DOJAZD",
+    languageFlagsAria: "Wybierz język",
+    navOpenMenu: "Otwórz menu",
+    navCloseMenu: "Zamknij menu",
+    heroTitle: "Jesteśmy otwarci!",
+    heroLine1: "Od poniedziałku do niedzieli",
+    heroLine2: "od 8:00 do 20:00",
+    heroPumpkinAlt: "Wesoła dynia",
+    heroCountdownTitle: "Już wkrótce otwarcie!",
+    heroCountdownSub: "Otwieramy w poniedziałek 14 września 2026 o 8:00.",
+    countdownDays: "Dni",
+    countdownHours: "Godziny",
+    countdownMinutes: "Minuty",
+    countdownSeconds: "Sekundy",
+    heroSaveCalendar: "Zapisz datę w kalendarzu",
+    openingCalendarSummary: "Otwarcie Monique’s Pumpkin Factory",
+    openingCalendarDescription:
+      "Otwieramy. Zapraszamy między dynie. Gotówka lub Tikkie. Dziś 8:00–20:00.",
+    howItWorksTitle: "Wybierz własne dynie",
+    howItWorksP1:
+      "W Pumpkin Factory lubimy prostotę i serdeczną atmosferę. Każdy może spacerować między dyniami, porównywać kształty i kolory i wybrać ulubione. Na dekorację, do kuchni albo po prostu dla jesiennego klimatu — zabierz to, co Ci się podoba, i ciesz się sezonem z nami.",
+    howItWorksP2:
+      "Płatność gotówką albo przez Tikkie (holenderskie żądanie płatności) — jak Ci wygodniej. Wszystko, co widzisz, uprawiamy sami, z troską, radością i miłością do rzemiosła. Każda dynia jest inna pod względem kształtu, koloru i charakteru. I jak zawsze u nas: jak się skończy, to się skończy.",
+    photoTopAlt: "Dynie na polu",
+    photoBottomAlt: "Goście wśród dyni",
+    faqTitle: "Często zadawane pytania",
+    recipesTitle: "Od zupy do ciasta",
+    recipesIntroStart:
+      "Dynia to najbardziej wszechstronny sezonowy składnik. Sześć holenderskich klasyków na inspirację — kliknij ",
+    recipesIntroEnd:
+      ", żeby rozwinąć przepis tutaj albo zapisać go jako PDF (okno drukowania).",
+    recipesShowWord: "POKAŻ PRZEPIS",
+    recipesBundleTitle: "Wszystkie przepisy — Monique’s Pumpkin Factory",
+    recipesDownloadAllPdf: "POBIERZ WSZYSTKO JAKO PDF",
+    recipesDownloadAllHint:
+      "Otwiera drukowanie. Wybierz „Zapisz jako PDF”, aby mieć jeden plik ze wszystkimi przepisami.",
+    socialTitle: "Obserwuj nas",
+    socialInstagramAria: "Otwórz @pumpkin.factory na Instagramie",
+    socialTiktokAria: "Otwórz @moniquepumpkinfactory na TikToku",
+    footerPhoneAria: "Zadzwoń do nas",
+    footerPhoneDisplay: "+31 6 26102741",
+    footerLine1: "Od poniedziałku do niedzieli",
+    footerLine2: "od 9:00 do 20:00",
+    recipe: {
+      servings: "PORCJE",
+      time: "CZAS",
+      ingredients: "Składniki",
+      method: "Przygotowanie",
+      showRecipe: "POKAŻ PRZEPIS",
+      hideRecipe: "UKRYJ PRZEPIS",
+      savePdf: "PDF",
+      busy: "CZEKAJ…",
+      htmlServings: "Porcje",
+      htmlTime: "Czas",
+      htmlIngredients: "Składniki",
+      htmlMethod: "Przygotowanie",
+      htmlFooter:
+        "Przepis z <strong>Monique&#39;s Pumpkin Factory</strong> — Akervoorderlaan 1, 2161 DP Lisse, Holandia",
+    },
+  },
 };
 
 export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
@@ -741,6 +804,57 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
         id: "edible",
         q: "Tutte le zucche si mangiano?",
         a: "Sì, ma alcune sono da decorazione — segnalato. Non sono dannose.",
+      },
+    ],
+  },
+  pl: {
+    colA: [
+      {
+        id: "appt",
+        q: "Czy muszę umówić się na wizytę?",
+        a: "Nie, nie trzeba się umawiać. Jesteśmy otwarci codziennie od 8:00 do 20:00 — po prostu wpadnij!",
+      },
+      {
+        id: "park",
+        q: "Gdzie mogę zaparkować?",
+        a: "Parkowanie tuż przed wejściem. Miejsc wystarczy dla wszystkich i jest bezpłatne.",
+      },
+      {
+        id: "do",
+        q: "Co można robić na miejscu?",
+        a: "Wybieraj spośród nawet 50 rodzajów dyni! W weekendy często częstujemy daniami z dyni — miło i klimatycznie.",
+      },
+      {
+        id: "reserve",
+        q: "Czy mogę zarezerwować dynie?",
+        a: "Niestety rezerwacje nie są możliwe. Przyjdź wcześniej, żeby mieć najlepszy wybór.",
+      },
+      {
+        id: "harvest",
+        q: "Czy mogę zbierać dynie samodzielnie?",
+        a: "Wszystkie dynie zostały już zebrane przez naszych wolontariuszy i czekają w ogrodzie — samodzielne zbieranie nie jest możliwe.",
+      },
+    ],
+    colB: [
+      {
+        id: "when",
+        q: "Od kiedy jesteście otwarci?",
+        a: "Monique’s Pumpkin Factory otwiera w poniedziałek 14 września 2026 i działa do połowy października 2026.",
+      },
+      {
+        id: "size",
+        q: "Jak duży jest teren / ile jest dyni?",
+        a: "Ogród ma około 100 m² — i tak miejsca starczy dla wszystkich. Uzupełniamy zapasy codziennie, więc duże i niezwykłe dynie często są dostępne. Jeśli się skończą, ogłosimy to z wyprzedzeniem w mediach społecznościowych.",
+      },
+      {
+        id: "pay",
+        q: "Jak mogę zapłacić?",
+        a: "Gotówką albo przez Tikkie (holenderskie żądanie płatności) — szybko i wygodnie.",
+      },
+      {
+        id: "edible",
+        q: "Czy wszystkie dynie są jadalne?",
+        a: "Wszystkie dynie są jadalne, ale niektóre nie smakują dobrze — to dynie ozdobne, wyraźnie oznaczone. Nie martw się: nie zaszkodzą zdrowiu.",
       },
     ],
   },

@@ -15,6 +15,7 @@ const FLAG_ORDER: { locale: Locale; src: string; label: string }[] = [
   { locale: "fr", src: FIGMA_ASSETS.flagFr, label: "Français" },
   { locale: "es", src: FIGMA_ASSETS.flagEs, label: "Español" },
   { locale: "it", src: FIGMA_ASSETS.flagIt, label: "Italiano" },
+  { locale: "pl", src: FIGMA_ASSETS.flagPl, label: "Polski" },
 ];
 
 export function SiteHeader() {

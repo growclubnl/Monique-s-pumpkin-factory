@@ -6,6 +6,7 @@ import { RECIPES_DE } from "./recipe-de";
 import { RECIPES_FR } from "./recipe-fr";
 import { RECIPES_ES } from "./recipe-es";
 import { RECIPES_IT } from "./recipe-it";
+import { RECIPES_PL } from "./recipe-pl";
 
 const BY_LOCALE: Record<Locale, Recipe[]> = {
   nl: RECIPES_NL,
@@ -14,6 +15,7 @@ const BY_LOCALE: Record<Locale, Recipe[]> = {
   fr: RECIPES_FR,
   es: RECIPES_ES,
   it: RECIPES_IT,
+  pl: RECIPES_PL,
 };
 
 export function getRecipes(locale: Locale): Recipe[] {

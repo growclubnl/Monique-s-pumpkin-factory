@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip_pl)">
+  <path d="M0 0H36V13.5H0V0Z" fill="#FFFFFF"/>
+  <path d="M0 13.5H36V27H0V13.5Z" fill="#DC143C"/>
+</g>
+<defs>
+  <clipPath id="clip_pl"><rect width="36" height="27" rx="3" fill="white"/></clipPath>
+</defs>
+</svg>
