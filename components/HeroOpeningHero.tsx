@@ -1,23 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import type { UiCopy } from "@/lib/i18n/copy";
 import { buildOpeningIcsCopy } from "@/lib/opening-calendar";
 import { OPENING_TIMESTAMP_MS } from "@/lib/opening";
+import { useShopStatus } from "@/lib/use-shop-status";
 
 function pad2(n: number): string {
   return n.toString().padStart(2, "0");
 }
 
 export function HeroOpeningHero({ ui }: { ui: UiCopy }) {
-  const [tick, setTick] = useState<number | null>(null);
-
-  useEffect(() => {
-    setTick(Date.now());
-    const id = window.setInterval(() => setTick(Date.now()), 1000);
-    return () => window.clearInterval(id);
-  }, []);
+  const { tick, seasonStarted, isOpen, opensAgainToday } = useShopStatus();
 
   const saveOpeningCalendar = useCallback(() => {
     const ics = buildOpeningIcsCopy(ui.openingCalendarSummary, ui.openingCalendarDescription);
@@ -30,13 +25,11 @@ export function HeroOpeningHero({ ui }: { ui: UiCopy }) {
     URL.revokeObjectURL(url);
   }, [ui.openingCalendarDescription, ui.openingCalendarSummary]);
 
-  const isOpen = tick !== null && tick >= OPENING_TIMESTAMP_MS;
-
-  if (isOpen) {
+  if (seasonStarted) {
     return (
       <>
         <h1 className="font-gasoek text-5xl leading-none text-pumpkin-orange sm:text-6xl lg:text-7xl xl:text-[96px]">
-          {ui.heroTitle}
+          {isOpen ? ui.heroTitle : opensAgainToday ? ui.heroClosedTitleToday : ui.heroClosedTitle}
         </h1>
         <p className="mt-6 text-2xl leading-[1.35] text-pumpkin-body sm:text-3xl lg:text-4xl">
           {ui.heroLine1}

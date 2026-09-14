@@ -10,7 +10,24 @@ import { UI, FAQ, getRecipes, HTML_LANG, type FaqItem } from "@/lib/i18n";
 import { buildCombinedRecipesHtml } from "@/lib/recipe-html";
 import { fetchLogoSvg } from "@/lib/recipe-logo";
 import { openHtmlPrintDialog } from "@/lib/recipe-print";
+import { HeroPumpkin } from "@/components/HeroPumpkin";
 import { useLanguage } from "@/components/LanguageProvider";
+import { useShopStatus } from "@/lib/use-shop-status";
+
+function FaqText({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) {
+      return (
+        <strong key={i} className="font-semibold text-neutral-800">
+          {bold[1]}
+        </strong>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
 
 function FaqPill({ item }: { item: FaqItem }) {
   return (
@@ -26,7 +43,7 @@ function FaqPill({ item }: { item: FaqItem }) {
         />
       </summary>
       <div className="px-6 pb-6 pt-1 text-sm leading-relaxed text-neutral-700 sm:px-8 sm:text-base">
-        {item.a}
+        <FaqText text={item.a} />
       </div>
     </details>
   );
@@ -39,6 +56,8 @@ export function PumpkinLanding() {
   const faq = FAQ[locale];
   const dishes = getRecipes(locale);
   const [allRecipesPdfBusy, setAllRecipesPdfBusy] = useState(false);
+  const { seasonStarted, isOpen } = useShopStatus();
+  const pumpkinSad = seasonStarted && !isOpen;
 
   const handleAllRecipesPdf = async () => {
     setAllRecipesPdfBusy(true);
@@ -109,12 +128,9 @@ export function PumpkinLanding() {
                   </div>
                 </div>
                 <div className="relative z-[1] aspect-[515/540] w-full">
-                  <Image
-                    src={FIGMA_ASSETS.heroPumpkin}
-                    alt={ui.heroPumpkinAlt}
-                    fill
-                    className="object-contain"
-                    priority
+                  <HeroPumpkin
+                    sad={pumpkinSad}
+                    alt={pumpkinSad ? ui.heroPumpkinClosedAlt : ui.heroPumpkinAlt}
                   />
                 </div>
               </div>

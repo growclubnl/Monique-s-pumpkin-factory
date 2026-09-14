@@ -8,9 +8,12 @@ export type UiCopy = {
   navOpenMenu: string;
   navCloseMenu: string;
   heroTitle: string;
+  heroClosedTitle: string;
+  heroClosedTitleToday: string;
   heroLine1: string;
   heroLine2: string;
   heroPumpkinAlt: string;
+  heroPumpkinClosedAlt: string;
   heroCountdownTitle: string;
   heroCountdownSub: string;
   countdownDays: string;
@@ -59,16 +62,19 @@ export type UiCopy = {
 
 export const UI: Record<Locale, UiCopy> = {
   nl: {
-    topNotice: "De pompoenen zijn geplant, nog even geduld!",
+    topNotice: "Parkeren kan voor de deur. Tot 17:00 beperkt beschikbaar, daarna volop plek.",
     contact: "CONTACT",
     route: "ROUTE",
     languageFlagsAria: "Kies een taal",
     navOpenMenu: "Menu openen",
     navCloseMenu: "Menu sluiten",
     heroTitle: "Wij zijn open!",
+    heroClosedTitle: "Wij zijn morgen weer open!",
+    heroClosedTitleToday: "Wij zijn vandaag weer open!",
     heroLine1: "Maandag tot en met zondag",
     heroLine2: "van 08:00 tot 20:00",
     heroPumpkinAlt: "Vrolijke pompoen",
+    heroPumpkinClosedAlt: "Verdrietige pompoen",
     heroCountdownTitle: "Nog even geduld!",
     heroCountdownSub: "Maandag 14 september 2026 om 08:00 gaan we open.",
     countdownDays: "Dagen",
@@ -122,16 +128,19 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   en: {
-    topNotice: "The pumpkins are planted — hang tight a little longer!",
+    topNotice: "Parking is available at the door. Limited until 5:00 PM, plenty of space after that.",
     contact: "CONTACT",
     route: "DIRECTIONS",
     languageFlagsAria: "Choose a language",
     navOpenMenu: "Open menu",
     navCloseMenu: "Close menu",
     heroTitle: "We’re open!",
+    heroClosedTitle: "We’re open again tomorrow!",
+    heroClosedTitleToday: "We’re open again today!",
     heroLine1: "Monday through Sunday",
     heroLine2: "8:00 AM – 8:00 PM",
     heroPumpkinAlt: "Cheerful pumpkin character",
+    heroPumpkinClosedAlt: "Sad pumpkin character",
     heroCountdownTitle: "Opening soon!",
     heroCountdownSub: "We open Monday 14 September 2026 at 8:00 AM.",
     countdownDays: "Days",
@@ -184,16 +193,19 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   de: {
-    topNotice: "Die Kürbisse sind gepflanzt — nur noch ein bisschen Geduld!",
+    topNotice: "Parken vor der Tür möglich. Bis 17:00 Uhr begrenzt, danach genug Platz.",
     contact: "KONTAKT",
     route: "ROUTE",
     languageFlagsAria: "Sprache wählen",
     navOpenMenu: "Menü öffnen",
     navCloseMenu: "Menü schließen",
     heroTitle: "Wir haben geöffnet!",
+    heroClosedTitle: "Morgen sind wir wieder geöffnet!",
+    heroClosedTitleToday: "Heute sind wir wieder geöffnet!",
     heroLine1: "Montag bis Sonntag",
     heroLine2: "8:00 – 20:00 Uhr",
     heroPumpkinAlt: "Fröhlicher Kürbis",
+    heroPumpkinClosedAlt: "Trauriger Kürbis",
     heroCountdownTitle: "Gleich geht’s los!",
     heroCountdownSub: "Am Montag, 14. September 2026, um 8:00 Uhr öffnen wir.",
     countdownDays: "Tage",
@@ -247,16 +259,19 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   fr: {
-    topNotice: "Les courges sont plantées — encore un peu de patience !",
+    topNotice: "Stationnement possible devant. Places limitées jusqu’à 17h, ensuite largement de place.",
     contact: "CONTACT",
     route: "ITINÉRAIRE",
     languageFlagsAria: "Choisir une langue",
     navOpenMenu: "Ouvrir le menu",
     navCloseMenu: "Fermer le menu",
     heroTitle: "Nous sommes ouverts !",
+    heroClosedTitle: "Nous rouvrons demain !",
+    heroClosedTitleToday: "Nous rouvrons aujourd’hui !",
     heroLine1: "Du lundi au dimanche",
     heroLine2: "de 8h à 20h",
     heroPumpkinAlt: "Citrouille joyeuse",
+    heroPumpkinClosedAlt: "Citrouille triste",
     heroCountdownTitle: "L’ouverture approche !",
     heroCountdownSub: "Ouverture le lundi 14 septembre 2026 à 8h.",
     countdownDays: "Jours",
@@ -310,16 +325,19 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   es: {
-    topNotice: "¡Las calabazas ya están plantadas — un poco más de paciencia!",
+    topNotice: "Se puede aparcar en la puerta. Limitado hasta las 17:00, después hay sitio de sobra.",
     contact: "CONTACTO",
     route: "CÓMO LLEGAR",
     languageFlagsAria: "Elegir idioma",
     navOpenMenu: "Abrir menú",
     navCloseMenu: "Cerrar menú",
     heroTitle: "¡Estamos abiertos!",
+    heroClosedTitle: "¡Mañana volvemos a abrir!",
+    heroClosedTitleToday: "¡Hoy volvemos a abrir!",
     heroLine1: "De lunes a domingo",
     heroLine2: "de 8:00 a 20:00",
     heroPumpkinAlt: "Calabaza sonriente",
+    heroPumpkinClosedAlt: "Calabaza triste",
     heroCountdownTitle: "¡La apertura está cerca!",
     heroCountdownSub: "Abrimos el lunes 14 de septiembre de 2026 a las 8:00.",
     countdownDays: "Días",
@@ -373,16 +391,19 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   it: {
-    topNotice: "Le zucche sono state piantate — ancora un po’ di pazienza!",
+    topNotice: "Si può parcheggiare davanti. Posti limitati fino alle 17:00, poi spazio per tutti.",
     contact: "CONTATTI",
     route: "INDICAZIONI",
     languageFlagsAria: "Scegli la lingua",
     navOpenMenu: "Apri menu",
     navCloseMenu: "Chiudi menu",
     heroTitle: "Siamo aperti!",
+    heroClosedTitle: "Domani siamo di nuovo aperti!",
+    heroClosedTitleToday: "Oggi siamo di nuovo aperti!",
     heroLine1: "Dal lunedì alla domenica",
     heroLine2: "dalle 8:00 alle 20:00",
     heroPumpkinAlt: "Zucca allegra",
+    heroPumpkinClosedAlt: "Zucca triste",
     heroCountdownTitle: "L’apertura è vicina!",
     heroCountdownSub: "Apriamo lunedì 14 settembre 2026 alle 8:00.",
     countdownDays: "Giorni",
@@ -436,16 +457,19 @@ export const UI: Record<Locale, UiCopy> = {
     },
   },
   pl: {
-    topNotice: "Dynie są już posadzone — jeszcze trochę cierpliwości!",
+    topNotice: "Parking przed wejściem. Do 17:00 miejsc ograniczona liczba, później pełen wybór miejsc.",
     contact: "KONTAKT",
     route: "DOJAZD",
     languageFlagsAria: "Wybierz język",
     navOpenMenu: "Otwórz menu",
     navCloseMenu: "Zamknij menu",
     heroTitle: "Jesteśmy otwarci!",
+    heroClosedTitle: "Jutro znów otwarte!",
+    heroClosedTitleToday: "Dziś znów otwarte!",
     heroLine1: "Od poniedziałku do niedzieli",
     heroLine2: "od 8:00 do 20:00",
     heroPumpkinAlt: "Wesoła dynia",
+    heroPumpkinClosedAlt: "Smutna dynia",
     heroCountdownTitle: "Już wkrótce otwarcie!",
     heroCountdownSub: "Otwieramy w poniedziałek 14 września 2026 o 8:00.",
     countdownDays: "Dni",
@@ -511,7 +535,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "park",
         q: "Waar kan ik parkeren?",
-        a: "Parkeren kan gewoon voor de deur. Er zijn genoeg plekken voor iedereen en parkeren is gratis!",
+        a: "Parkeren kan gewoon voor de deur en is gratis. Doordeweeks van 08:00 tot 17:00 is het aantal plekken beperkt; daarna is er plek voor iedereen.",
       },
       {
         id: "do",
@@ -548,7 +572,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Zijn alle pompoenen eetbaar?",
-        a: "Alle pompoenen zijn eetbaar, maar sommige smaken gewoon niet lekker — dit zijn echte decoratiepompoenen. Dit staat duidelijk aangegeven bij de aankoop. Geen zorgen: ziek worden kan er niet van!",
+        a: "Alle **onze** pompoenen die wij hier verkopen zijn eetbaar, maar sommige smaken gewoon niet lekker — dit zijn echte decoratiepompoenen. Dit staat duidelijk aangegeven bij de aankoop. Bij vragen kan je altijd bij Monique terecht.",
       },
     ],
   },
@@ -562,7 +586,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "park",
         q: "Where can I park?",
-        a: "You can park right in front. There’s room for everyone and parking is free.",
+        a: "You can park right in front — parking is free. On weekdays from 8:00 AM to 5:00 PM spaces are limited; after that there’s room for everyone.",
       },
       {
         id: "do",
@@ -599,7 +623,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Are all pumpkins edible?",
-        a: "All pumpkins are edible, but some aren’t tasty — those are decoration pumpkins, clearly labelled. Don’t worry: they won’t make you ill.",
+        a: "All **our** pumpkins that we sell here are edible, but some aren’t tasty — those are decoration pumpkins, clearly labelled. If you have questions, you can always ask Monique.",
       },
     ],
   },
@@ -613,7 +637,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "park",
         q: "Wo kann ich parken?",
-        a: "Direkt vor der Tür. Genug Platz und kostenlos.",
+        a: "Direkt vor der Tür und kostenlos. Wochentags von 8:00 bis 17:00 Uhr sind die Plätze begrenzt; danach ist genug Platz für alle.",
       },
       {
         id: "do",
@@ -650,7 +674,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Sind alle Kürbisse essbar?",
-        a: "Essbar ja, aber manche schmecken nicht — Dekokürbisse sind ausgewiesen. Unbedenklich für die Gesundheit.",
+        a: "Alle **unsere** Kürbisse, die wir hier verkaufen, sind essbar, aber manche schmecken nicht — Dekokürbisse sind ausgewiesen. Bei Fragen kannst du dich immer an Monique wenden.",
       },
     ],
   },
@@ -664,7 +688,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "park",
         q: "Où se garer ?",
-        a: "Devant la boutique — assez de places et gratuit.",
+        a: "Devant la boutique, et c’est gratuit. En semaine de 8h à 17h les places sont limitées ; ensuite il y a de la place pour tout le monde.",
       },
       {
         id: "do",
@@ -701,7 +725,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Toutes les courges sont comestibles ?",
-        a: "Oui, mais certaines sont décoratives — signalées. Sans risque pour la santé.",
+        a: "Toutes **nos** courges que nous vendons ici sont comestibles, mais certaines sont décoratives — signalées. Pour toute question, tu peux toujours t’adresser à Monique.",
       },
     ],
   },
@@ -715,7 +739,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "park",
         q: "¿Dónde aparcar?",
-        a: "Delante del local — hay sitio y es gratis.",
+        a: "Delante del local y es gratis. Entre semana de 8:00 a 17:00 hay pocas plazas; después hay sitio para todos.",
       },
       {
         id: "do",
@@ -752,7 +776,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "¿Todas son comestibles?",
-        a: "Sí, pero algunas son solo decorativas — está indicado. No son nocivas.",
+        a: "Todas **nuestras** calabazas que vendemos aquí son comestibles, pero algunas son solo decorativas — está indicado. Si tienes dudas, siempre puedes preguntar a Monique.",
       },
     ],
   },
@@ -766,7 +790,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "park",
         q: "Dove parcheggiare?",
-        a: "Davanti al locale — posti sufficienti e parcheggio gratuito.",
+        a: "Davanti al locale e il parcheggio è gratuito. Nei giorni feriali dalle 8:00 alle 17:00 i posti sono limitati; dopo c’è posto per tutti.",
       },
       {
         id: "do",
@@ -803,7 +827,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Tutte le zucche si mangiano?",
-        a: "Sì, ma alcune sono da decorazione — segnalato. Non sono dannose.",
+        a: "Tutte **le nostre** zucche che vendiamo qui si mangiano, ma alcune sono da decorazione — segnalato. Per domande puoi sempre rivolgerti a Monique.",
       },
     ],
   },
@@ -817,7 +841,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "park",
         q: "Gdzie mogę zaparkować?",
-        a: "Parkowanie tuż przed wejściem. Miejsc wystarczy dla wszystkich i jest bezpłatne.",
+        a: "Parkowanie tuż przed wejściem i jest bezpłatne. W dni powszednie od 8:00 do 17:00 miejsc jest ograniczona liczba; później starczy dla wszystkich.",
       },
       {
         id: "do",
@@ -854,7 +878,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Czy wszystkie dynie są jadalne?",
-        a: "Wszystkie dynie są jadalne, ale niektóre nie smakują dobrze — to dynie ozdobne, wyraźnie oznaczone. Nie martw się: nie zaszkodzą zdrowiu.",
+        a: "Wszystkie **nasze** dynie, które tutaj sprzedajemy, są jadalne, ale niektóre nie smakują dobrze — to dynie ozdobne, wyraźnie oznaczone. W razie pytań zawsze możesz zwrócić się do Monique.",
       },
     ],
   },

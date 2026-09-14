@@ -14,6 +14,7 @@ export const FIGMA_ASSETS = {
   flagPl: "/figma/flag-pl.svg",
   heroEllipse: "/figma/hero-ellipse.svg",
   heroPumpkin: "/figma/hero-pumpkin.svg",
+  heroPumpkinSad: "/figma/hero-pumpkin-sad.svg",
   chevron: "/figma/chevron.svg",
   socialInstagram: "/figma/social-instagram.svg",
   socialFacebook: "/figma/social-facebook.svg",
