@@ -572,7 +572,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Zijn alle pompoenen eetbaar?",
-        a: "Alle **onze** pompoenen die wij hier verkopen zijn eetbaar, maar sommige smaken gewoon niet lekker — dit zijn echte decoratiepompoenen. Dit staat duidelijk aangegeven bij de aankoop. Bij vragen kan je altijd bij Monique terecht.",
+        a: "Al **onze** pompoenen zijn eetbaar. Sommige zijn alleen bedoeld als decoratie, omdat ze simpelweg niet lekker smaken. Dit staat duidelijk aangegeven bij de aankoop. Twijfel je? Vraag het gerust aan Monique!",
       },
     ],
   },
@@ -623,7 +623,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Are all pumpkins edible?",
-        a: "All **our** pumpkins that we sell here are edible, but some aren’t tasty — those are decoration pumpkins, clearly labelled. If you have questions, you can always ask Monique.",
+        a: "All **our** pumpkins are edible. Some are meant only as decoration, simply because they don’t taste good. This is clearly labelled at purchase. Not sure? Just ask Monique!",
       },
     ],
   },
@@ -674,7 +674,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Sind alle Kürbisse essbar?",
-        a: "Alle **unsere** Kürbisse, die wir hier verkaufen, sind essbar, aber manche schmecken nicht — Dekokürbisse sind ausgewiesen. Bei Fragen kannst du dich immer an Monique wenden.",
+        a: "Alle **unsere** Kürbisse sind essbar. Manche sind nur zur Dekoration gedacht, weil sie einfach nicht schmecken. Das ist beim Kauf deutlich gekennzeichnet. Unsicher? Frag einfach Monique!",
       },
     ],
   },
@@ -725,7 +725,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Toutes les courges sont comestibles ?",
-        a: "Toutes **nos** courges que nous vendons ici sont comestibles, mais certaines sont décoratives — signalées. Pour toute question, tu peux toujours t’adresser à Monique.",
+        a: "Toutes **nos** courges sont comestibles. Certaines sont uniquement décoratives, simplement parce qu’elles n’ont pas bon goût. C’est clairement indiqué à l’achat. Un doute ? Demande à Monique !",
       },
     ],
   },
@@ -776,7 +776,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "¿Todas son comestibles?",
-        a: "Todas **nuestras** calabazas que vendemos aquí son comestibles, pero algunas son solo decorativas — está indicado. Si tienes dudas, siempre puedes preguntar a Monique.",
+        a: "Todas **nuestras** calabazas son comestibles. Algunas son solo decorativas, simplemente porque no saben bien. Está claramente indicado en la compra. ¿Dudas? Pregúntale a Monique.",
       },
     ],
   },
@@ -827,7 +827,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Tutte le zucche si mangiano?",
-        a: "Tutte **le nostre** zucche che vendiamo qui si mangiano, ma alcune sono da decorazione — segnalato. Per domande puoi sempre rivolgerti a Monique.",
+        a: "Tutte **le nostre** zucche sono commestibili. Alcune sono solo decorative, semplicemente perché non sono buone. È chiaramente indicato all’acquisto. Dubbi? Chiedi pure a Monique!",
       },
     ],
   },
@@ -878,7 +878,7 @@ export const FAQ: Record<Locale, { colA: FaqItem[]; colB: FaqItem[] }> = {
       {
         id: "edible",
         q: "Czy wszystkie dynie są jadalne?",
-        a: "Wszystkie **nasze** dynie, które tutaj sprzedajemy, są jadalne, ale niektóre nie smakują dobrze — to dynie ozdobne, wyraźnie oznaczone. W razie pytań zawsze możesz zwrócić się do Monique.",
+        a: "Wszystkie **nasze** dynie są jadalne. Niektóre są tylko ozdobne, po prostu dlatego, że nie smakują dobrze. Jest to wyraźnie oznaczone przy zakupie. Wątpliwości? Zapytaj Monique!",
       },
     ],
   },
