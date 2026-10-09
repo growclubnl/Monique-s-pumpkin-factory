@@ -7,6 +7,7 @@ import { FIGMA_ASSETS } from "@/lib/figma-assets";
 import { UI } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/types";
 import { useLanguage } from "@/components/LanguageProvider";
+import { SEASON_SOLD_OUT } from "@/lib/season";
 
 const FLAG_ORDER: { locale: Locale; src: string; label: string }[] = [
   { locale: "nl", src: FIGMA_ASSETS.flagNl, label: "Nederlands" },
@@ -88,14 +89,16 @@ export function SiteHeader() {
         >
           {ui.contact}
         </a>
-        <Link
-          href="https://maps.google.com/?q=Akervoorderlaan+1,+2161+DP+Lisse"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-bakbak inline-flex h-11 min-w-[120px] items-center justify-center rounded-full bg-white px-6 text-xl text-pumpkin-green-dark transition hover:bg-neutral-100"
-        >
-          {ui.route}
-        </Link>
+        {SEASON_SOLD_OUT ? null : (
+          <Link
+            href="https://maps.google.com/?q=Akervoorderlaan+1,+2161+DP+Lisse"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bakbak inline-flex h-11 min-w-[120px] items-center justify-center rounded-full bg-white px-6 text-xl text-pumpkin-green-dark transition hover:bg-neutral-100"
+          >
+            {ui.route}
+          </Link>
+        )}
         <div
           className="flex shrink-0 items-center gap-1.5 sm:gap-2"
           role="group"
@@ -248,15 +251,17 @@ export function SiteHeader() {
             >
               {ui.contact}
             </a>
-            <Link
-              href="https://maps.google.com/?q=Akervoorderlaan+1,+2161+DP+Lisse"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bakbak inline-flex h-12 w-fit items-center justify-center rounded-full bg-white px-8 text-xl text-pumpkin-green-dark shadow-sm"
-              onClick={closeMobile}
-            >
-              {ui.route}
-            </Link>
+            {SEASON_SOLD_OUT ? null : (
+              <Link
+                href="https://maps.google.com/?q=Akervoorderlaan+1,+2161+DP+Lisse"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bakbak inline-flex h-12 w-fit items-center justify-center rounded-full bg-white px-8 text-xl text-pumpkin-green-dark shadow-sm"
+                onClick={closeMobile}
+              >
+                {ui.route}
+              </Link>
+            )}
           </div>
         </div>
       ) : null}

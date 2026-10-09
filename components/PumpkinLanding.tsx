@@ -11,7 +11,9 @@ import { buildCombinedRecipesHtml } from "@/lib/recipe-html";
 import { fetchLogoSvg } from "@/lib/recipe-logo";
 import { openHtmlPrintDialog } from "@/lib/recipe-print";
 import { HeroPumpkin } from "@/components/HeroPumpkin";
+import { SoldOutPopup } from "@/components/SoldOutPopup";
 import { useLanguage } from "@/components/LanguageProvider";
+import { SEASON_SOLD_OUT } from "@/lib/season";
 import { useShopStatus } from "@/lib/use-shop-status";
 
 function FaqText({ text }: { text: string }) {
@@ -57,7 +59,18 @@ export function PumpkinLanding() {
   const dishes = getRecipes(locale);
   const [allRecipesPdfBusy, setAllRecipesPdfBusy] = useState(false);
   const { seasonStarted, isOpen } = useShopStatus();
-  const pumpkinSad = seasonStarted && !isOpen;
+  const showSoldOut = SEASON_SOLD_OUT && seasonStarted;
+  const pumpkinSad = !showSoldOut && seasonStarted && !isOpen;
+  const heroUi = showSoldOut
+    ? {
+        ...ui,
+        heroTitle: ui.soldOutTitle,
+        heroClosedTitle: ui.soldOutTitle,
+        heroClosedTitleToday: ui.soldOutTitle,
+        heroLine1: ui.soldOutLine1,
+        heroLine2: ui.soldOutLine2,
+      }
+    : ui;
 
   const handleAllRecipesPdf = async () => {
     setAllRecipesPdfBusy(true);
@@ -84,8 +97,15 @@ export function PumpkinLanding() {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      <div className="bg-pumpkin-green py-2 text-center text-base text-white sm:text-lg">
-        {ui.topNotice}
+      {showSoldOut ? (
+        <SoldOutPopup
+          title={ui.soldOutPopupTitle}
+          body={ui.soldOutPopupBody}
+          closeLabel={ui.soldOutPopupClose}
+        />
+      ) : null}
+      <div className="bg-pumpkin-green px-4 py-2 text-center text-base text-white sm:text-lg">
+        {showSoldOut ? ui.soldOutNotice : ui.topNotice}
       </div>
       <section className="relative overflow-hidden bg-pumpkin-cream">
         <div className="pointer-events-none absolute inset-0 opacity-90">
@@ -105,7 +125,7 @@ export function PumpkinLanding() {
           </div>
           <div className="relative z-0 mt-6 grid items-center gap-10 lg:grid-cols-2 lg:gap-6 xl:gap-12">
             <div className="max-w-xl">
-              <HeroOpeningHero ui={ui} />
+              <HeroOpeningHero ui={heroUi} />
             </div>
             <div className="pointer-events-none relative mx-auto aspect-[4/3] w-full max-w-lg lg:max-w-none lg:justify-self-end">
               <div className="absolute left-1/2 top-1/2 w-[85%] max-w-md -translate-x-1/2 -translate-y-1/2 rotate-[42deg] lg:w-[110%] lg:max-w-none">
@@ -130,8 +150,40 @@ export function PumpkinLanding() {
                 <div className="relative z-[1] aspect-[515/540] w-full">
                   <HeroPumpkin
                     sad={pumpkinSad}
-                    alt={pumpkinSad ? ui.heroPumpkinClosedAlt : ui.heroPumpkinAlt}
+                    sleeping={showSoldOut}
+                    alt={
+                      showSoldOut
+                        ? ui.soldOutPumpkinAlt
+                        : pumpkinSad
+                          ? ui.heroPumpkinClosedAlt
+                          : ui.heroPumpkinAlt
+                    }
                   />
+                  {showSoldOut ? (
+                    <>
+                      <div
+                        className="pointer-events-none absolute -right-[18%] top-[2%] z-10 h-[36%] w-[48%] sm:-right-[14%]"
+                        aria-hidden
+                      >
+                        <span className="font-gasoek absolute bottom-[8%] left-[6%] -rotate-12 text-[clamp(1.35rem,4vw,2.35rem)] leading-none text-[#1E4226]">
+                          z
+                        </span>
+                        <span className="font-gasoek absolute bottom-[34%] left-[32%] -rotate-6 text-[clamp(1.75rem,5vw,3rem)] leading-none text-[#1E4226]">
+                          z
+                        </span>
+                        <span className="font-gasoek absolute right-0 top-0 -rotate-2 text-[clamp(2.15rem,6vw,3.6rem)] leading-none text-[#1E4226]">
+                          Z
+                        </span>
+                      </div>
+                      <div className="absolute bottom-[6%] left-[-8%] z-10 w-[62%] -rotate-6 sm:bottom-[8%] sm:left-[-4%] sm:w-[58%]">
+                        <div className="rounded-md border-[3px] border-[#3d2914] bg-[#fff6e8] px-2 py-2 shadow-[3px_4px_0_#3d2914] sm:px-3 sm:py-2.5">
+                          <p className="font-gasoek text-center text-[clamp(1.15rem,4.2vw,2.15rem)] leading-none tracking-wide text-pumpkin-orange">
+                            Sold out!
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  ) : null}
                 </div>
               </div>
             </div>

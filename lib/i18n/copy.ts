@@ -2,6 +2,7 @@ import type { FaqItem, Locale } from "./types";
 
 export type UiCopy = {
   topNotice: string;
+  soldOutNotice: string;
   contact: string;
   route: string;
   languageFlagsAria: string;
@@ -14,6 +15,13 @@ export type UiCopy = {
   heroLine2: string;
   heroPumpkinAlt: string;
   heroPumpkinClosedAlt: string;
+  soldOutTitle: string;
+  soldOutLine1: string;
+  soldOutLine2: string;
+  soldOutPumpkinAlt: string;
+  soldOutPopupTitle: string;
+  soldOutPopupBody: string;
+  soldOutPopupClose: string;
   heroCountdownTitle: string;
   heroCountdownSub: string;
   countdownDays: string;
@@ -63,6 +71,8 @@ export type UiCopy = {
 export const UI: Record<Locale, UiCopy> = {
   nl: {
     topNotice: "Parkeren kan voor de deur. Tot 17:00 beperkt beschikbaar, daarna volop plek.",
+    soldOutNotice:
+      "Dank voor jullie komst en gezelligheid, maak er een mooie herfst van. Groet monique en alle mensen van de Pumpkin crew 🎃🧡",
     contact: "CONTACT",
     route: "ROUTE",
     languageFlagsAria: "Kies een taal",
@@ -75,6 +85,14 @@ export const UI: Record<Locale, UiCopy> = {
     heroLine2: "van 08:00 tot 20:00",
     heroPumpkinAlt: "Vrolijke pompoen",
     heroPumpkinClosedAlt: "Verdrietige pompoen",
+    soldOutTitle: "Uitverkocht",
+    soldOutLine1: "Bedankt allemaal,",
+    soldOutLine2: "we zien jullie weer in 2027",
+    soldOutPumpkinAlt: "Slapende pompoen",
+    soldOutPopupTitle: "Lieve mensen",
+    soldOutPopupBody:
+      "Wat waren het super gezellige 4 weken. Jullie kwamen overal vandaan, jong en oud, zoveel nationaliteiten.\n\nHelaas zijn alle pompoenen weer helemaal op.\n\nDank voor jullie komst en gezelligheid, maak er een mooie herfst van.\n\nGroet monique en alle mensen van de Pumpkin crew 🎃🧡",
+    soldOutPopupClose: "Sluiten",
     heroCountdownTitle: "Nog even geduld!",
     heroCountdownSub: "Maandag 14 september 2026 om 08:00 gaan we open.",
     countdownDays: "Dagen",
@@ -129,6 +147,8 @@ export const UI: Record<Locale, UiCopy> = {
   },
   en: {
     topNotice: "Parking is available at the door. Limited until 5:00 PM, plenty of space after that.",
+    soldOutNotice:
+      "Thank you for coming and for the good cheer — have a lovely autumn. Greetings from monique and everyone on the Pumpkin crew 🎃🧡",
     contact: "CONTACT",
     route: "DIRECTIONS",
     languageFlagsAria: "Choose a language",
@@ -141,6 +161,14 @@ export const UI: Record<Locale, UiCopy> = {
     heroLine2: "8:00 AM – 8:00 PM",
     heroPumpkinAlt: "Cheerful pumpkin character",
     heroPumpkinClosedAlt: "Sad pumpkin character",
+    soldOutTitle: "Sold out",
+    soldOutLine1: "Thank you everyone,",
+    soldOutLine2: "see you again in 2027",
+    soldOutPumpkinAlt: "Sleeping pumpkin",
+    soldOutPopupTitle: "Dear friends",
+    soldOutPopupBody:
+      "What a wonderfully cheerful four weeks it was. You came from everywhere, young and old, so many nationalities.\n\nSadly the pumpkins are all gone again.\n\nThank you for coming and for the good cheer — have a lovely autumn.\n\nGreetings from monique and everyone on the Pumpkin crew 🎃🧡",
+    soldOutPopupClose: "Close",
     heroCountdownTitle: "Opening soon!",
     heroCountdownSub: "We open Monday 14 September 2026 at 8:00 AM.",
     countdownDays: "Days",
@@ -194,6 +222,8 @@ export const UI: Record<Locale, UiCopy> = {
   },
   de: {
     topNotice: "Parken vor der Tür möglich. Bis 17:00 Uhr begrenzt, danach genug Platz.",
+    soldOutNotice:
+      "Danke für euren Besuch und die Geselligkeit, habt einen schönen Herbst. Grüße von monique und allen von der Pumpkin crew 🎃🧡",
     contact: "KONTAKT",
     route: "ROUTE",
     languageFlagsAria: "Sprache wählen",
@@ -206,6 +236,14 @@ export const UI: Record<Locale, UiCopy> = {
     heroLine2: "8:00 – 20:00 Uhr",
     heroPumpkinAlt: "Fröhlicher Kürbis",
     heroPumpkinClosedAlt: "Trauriger Kürbis",
+    soldOutTitle: "Ausverkauft",
+    soldOutLine1: "Danke an alle,",
+    soldOutLine2: "wir sehen uns wieder 2027",
+    soldOutPumpkinAlt: "Schlafender Kürbis",
+    soldOutPopupTitle: "Liebe Leute",
+    soldOutPopupBody:
+      "Was waren das für wunderbar gesellige 4 Wochen. Ihr kamt von überall her, jung und alt, so viele Nationalitäten.\n\nLeider sind alle Kürbisse wieder ganz auf.\n\nDanke für euren Besuch und die Geselligkeit, habt einen schönen Herbst.\n\nGrüße von monique und allen von der Pumpkin crew 🎃🧡",
+    soldOutPopupClose: "Schließen",
     heroCountdownTitle: "Gleich geht’s los!",
     heroCountdownSub: "Am Montag, 14. September 2026, um 8:00 Uhr öffnen wir.",
     countdownDays: "Tage",
@@ -260,6 +298,8 @@ export const UI: Record<Locale, UiCopy> = {
   },
   fr: {
     topNotice: "Stationnement possible devant. Places limitées jusqu’à 17h, ensuite largement de place.",
+    soldOutNotice:
+      "Merci d’être venus et pour la bonne humeur, passez un bel automne. Salutations de monique et de toute la Pumpkin crew 🎃🧡",
     contact: "CONTACT",
     route: "ITINÉRAIRE",
     languageFlagsAria: "Choisir une langue",
@@ -272,6 +312,14 @@ export const UI: Record<Locale, UiCopy> = {
     heroLine2: "de 8h à 20h",
     heroPumpkinAlt: "Citrouille joyeuse",
     heroPumpkinClosedAlt: "Citrouille triste",
+    soldOutTitle: "Épuisé",
+    soldOutLine1: "Merci à tous,",
+    soldOutLine2: "on se revoit en 2027",
+    soldOutPumpkinAlt: "Citrouille endormie",
+    soldOutPopupTitle: "Chers amis",
+    soldOutPopupBody:
+      "Quelles quatre semaines formidables et joyeuses. Vous êtes venus de partout, jeunes et moins jeunes, tant de nationalités.\n\nHélas, toutes les citrouilles sont de nouveau épuisées.\n\nMerci d’être venus et pour la bonne humeur, passez un bel automne.\n\nSalutations de monique et de toute la Pumpkin crew 🎃🧡",
+    soldOutPopupClose: "Fermer",
     heroCountdownTitle: "L’ouverture approche !",
     heroCountdownSub: "Ouverture le lundi 14 septembre 2026 à 8h.",
     countdownDays: "Jours",
@@ -326,6 +374,8 @@ export const UI: Record<Locale, UiCopy> = {
   },
   es: {
     topNotice: "Se puede aparcar en la puerta. Limitado hasta las 17:00, después hay sitio de sobra.",
+    soldOutNotice:
+      "Gracias por venir y por el buen ambiente, que tengáis un otoño bonito. Saludos de monique y de toda la Pumpkin crew 🎃🧡",
     contact: "CONTACTO",
     route: "CÓMO LLEGAR",
     languageFlagsAria: "Elegir idioma",
@@ -338,6 +388,14 @@ export const UI: Record<Locale, UiCopy> = {
     heroLine2: "de 8:00 a 20:00",
     heroPumpkinAlt: "Calabaza sonriente",
     heroPumpkinClosedAlt: "Calabaza triste",
+    soldOutTitle: "Agotado",
+    soldOutLine1: "Gracias a todos,",
+    soldOutLine2: "nos vemos en 2027",
+    soldOutPumpkinAlt: "Calabaza dormida",
+    soldOutPopupTitle: "Querida gente",
+    soldOutPopupBody:
+      "Qué cuatro semanas tan alegres. Vinisteis de todas partes, jóvenes y mayores, tantas nacionalidades.\n\nPor desgracia las calabazas se han acabado otra vez.\n\nGracias por venir y por el buen ambiente, que tengáis un otoño bonito.\n\nSaludos de monique y de toda la Pumpkin crew 🎃🧡",
+    soldOutPopupClose: "Cerrar",
     heroCountdownTitle: "¡La apertura está cerca!",
     heroCountdownSub: "Abrimos el lunes 14 de septiembre de 2026 a las 8:00.",
     countdownDays: "Días",
@@ -392,6 +450,8 @@ export const UI: Record<Locale, UiCopy> = {
   },
   it: {
     topNotice: "Si può parcheggiare davanti. Posti limitati fino alle 17:00, poi spazio per tutti.",
+    soldOutNotice:
+      "Grazie per essere venuti e per l’allegria, buon autunno. Saluti da monique e da tutta la Pumpkin crew 🎃🧡",
     contact: "CONTATTI",
     route: "INDICAZIONI",
     languageFlagsAria: "Scegli la lingua",
@@ -404,6 +464,14 @@ export const UI: Record<Locale, UiCopy> = {
     heroLine2: "dalle 8:00 alle 20:00",
     heroPumpkinAlt: "Zucca allegra",
     heroPumpkinClosedAlt: "Zucca triste",
+    soldOutTitle: "Esaurito",
+    soldOutLine1: "Grazie a tutti,",
+    soldOutLine2: "ci vediamo nel 2027",
+    soldOutPumpkinAlt: "Zucca addormentata",
+    soldOutPopupTitle: "Cari amici",
+    soldOutPopupBody:
+      "Che quattro settimane allegre. Siete arrivati da ogni dove, giovani e meno giovani, tante nazionalità.\n\nPurtroppo le zucche sono di nuovo finite.\n\nGrazie per essere venuti e per l’allegria, buon autunno.\n\nSaluti da monique e da tutta la Pumpkin crew 🎃🧡",
+    soldOutPopupClose: "Chiudi",
     heroCountdownTitle: "L’apertura è vicina!",
     heroCountdownSub: "Apriamo lunedì 14 settembre 2026 alle 8:00.",
     countdownDays: "Giorni",
@@ -458,6 +526,8 @@ export const UI: Record<Locale, UiCopy> = {
   },
   pl: {
     topNotice: "Parking przed wejściem. Do 17:00 miejsc ograniczona liczba, później pełen wybór miejsc.",
+    soldOutNotice:
+      "Dziękujemy za przybycie i miłą atmosferę, pięknej jesieni. Pozdrawia monique i cała Pumpkin crew 🎃🧡",
     contact: "KONTAKT",
     route: "DOJAZD",
     languageFlagsAria: "Wybierz język",
@@ -470,6 +540,14 @@ export const UI: Record<Locale, UiCopy> = {
     heroLine2: "od 8:00 do 20:00",
     heroPumpkinAlt: "Wesoła dynia",
     heroPumpkinClosedAlt: "Smutna dynia",
+    soldOutTitle: "Wyprzedane",
+    soldOutLine1: "Dziękujemy wszystkim,",
+    soldOutLine2: "do zobaczenia w 2027",
+    soldOutPumpkinAlt: "Śpiąca dynia",
+    soldOutPopupTitle: "Drodzy",
+    soldOutPopupBody:
+      "Co to były za wspaniałe, radosne 4 tygodnie. Przyjechaliście zewsząd, młodzi i starsi, tyle narodowości.\n\nNiestety wszystkie dynie znów się skończyły.\n\nDziękujemy za przybycie i miłą atmosferę, pięknej jesieni.\n\nPozdrawia monique i cała Pumpkin crew 🎃🧡",
+    soldOutPopupClose: "Zamknij",
     heroCountdownTitle: "Już wkrótce otwarcie!",
     heroCountdownSub: "Otwieramy w poniedziałek 14 września 2026 o 8:00.",
     countdownDays: "Dni",

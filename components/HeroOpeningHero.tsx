@@ -5,6 +5,7 @@ import { useCallback } from "react";
 import type { UiCopy } from "@/lib/i18n/copy";
 import { buildOpeningIcsCopy } from "@/lib/opening-calendar";
 import { OPENING_TIMESTAMP_MS } from "@/lib/opening";
+import { SEASON_SOLD_OUT } from "@/lib/season";
 import { useShopStatus } from "@/lib/use-shop-status";
 
 function pad2(n: number): string {
@@ -36,16 +37,18 @@ export function HeroOpeningHero({ ui }: { ui: UiCopy }) {
           <br />
           {ui.heroLine2}
         </p>
-        <div className="mt-10">
-          <Link
-            href="https://maps.google.com/?q=Akervoorderlaan+1,+2161+DP+Lisse"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bakbak inline-flex h-14 min-w-[180px] items-center justify-center rounded-full bg-white px-10 text-xl text-black transition hover:bg-neutral-100"
-          >
-            {ui.route}
-          </Link>
-        </div>
+        {SEASON_SOLD_OUT ? null : (
+          <div className="mt-10">
+            <Link
+              href="https://maps.google.com/?q=Akervoorderlaan+1,+2161+DP+Lisse"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bakbak inline-flex h-14 min-w-[180px] items-center justify-center rounded-full bg-white px-10 text-xl text-black transition hover:bg-neutral-100"
+            >
+              {ui.route}
+            </Link>
+          </div>
+        )}
       </>
     );
   }
